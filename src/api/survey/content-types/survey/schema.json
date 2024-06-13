@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "surveys",
+  "info": {
+    "singularName": "survey",
+    "pluralName": "surveys",
+    "displayName": "Survey",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    }
+  }
+}
