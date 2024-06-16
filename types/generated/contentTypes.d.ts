@@ -854,6 +854,46 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiNewsRoomNewsRoom extends Schema.SingleType {
+  collectionName: 'news_rooms';
+  info: {
+    singularName: 'news-room';
+    pluralName: 'news-rooms';
+    displayName: 'NewsRoom';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.article-list',
+        'components.article',
+        'components.button',
+        'components.header',
+        'components.info-card',
+        'components.title',
+        'components.two-button-cta'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::news-room.news-room',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::news-room.news-room',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRestaurantRestaurant extends Schema.CollectionType {
   collectionName: 'restaurants';
   info: {
@@ -941,6 +981,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::answer.answer': ApiAnswerAnswer;
       'api::category.category': ApiCategoryCategory;
+      'api::news-room.news-room': ApiNewsRoomNewsRoom;
       'api::restaurant.restaurant': ApiRestaurantRestaurant;
       'api::survey.survey': ApiSurveySurvey;
     }

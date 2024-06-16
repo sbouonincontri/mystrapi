@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_two_button_ctas",
+  "info": {
+    "displayName": "TwoButtonCTA",
+    "icon": "bell",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "FirstButton": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.button"
+    },
+    "SecondButton": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.button"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_titles",
+  "info": {
+    "displayName": "title",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

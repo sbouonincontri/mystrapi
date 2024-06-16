@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_article_lists",
+  "info": {
+    "displayName": "ArticleList",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "Article": {
+      "displayName": "Article",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.article"
+    }
+  }
+}
